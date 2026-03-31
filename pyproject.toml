@@ -1,4 +1,5 @@
 [tool.poetry]
+package-mode = false
 name = "brainstormer"
 version = "0.1.0"
 description = "Generates relevant noun phrases based on any input using a bing search"
