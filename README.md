@@ -1,21 +1,20 @@
 # Brainstormer
-Finds further research areas into a topic!
-<br>
-<br>
-## Installation
-To install, first, ensure [Poetry](python-poetry.org) is installed. You can install it with
-```
-pip install poetry
-```
 
-Then, run
-```
-poetry install
-```
+Enter a research topic and get related phrases you can explore next. This is an older web prototype; its search backend is retired.
 
-Register for an Azure Cognitive Search API key <a href="https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/">Here</a>. Save this key in `key.txt` at the root of the repository. An Azure Cognitive Search API key is required to find answers and branching topics, but is free for low-use scenarios.
+![Brainstormer project cover](.github/readme-cover.svg)
 
-You can now run the program with
-```
-poetry run python3 webapp.py
-```
+## Table of Contents
+
+- [Project status](#project-status)
+- [Technologies](#technologies)
+
+## Project status
+
+The app uses Bing Web Search results to suggest related noun phrases. [Microsoft retired Bing Search APIs](https://learn.microsoft.com/lifecycle/announcements/bing-search-api-retirement) in August 2025, so the checked-in backend no longer offers a working setup. Running the full app requires replacing the search integration in `bing.py`.
+
+## Technologies
+
+- [Flask](https://flask.palletsprojects.com/) and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/) serve the prototype.
+- [NLTK](https://www.nltk.org/) handles language processing.
+- [Requests](https://requests.readthedocs.io/) calls the original search API.
